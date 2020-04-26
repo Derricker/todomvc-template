@@ -13,13 +13,14 @@
 				<input class="new-todo" placeholder="What needs to be done?" autofocus />
 			</header>
 			<!-- 列表中没有任务时 隐藏main -->
+			<!-- 任务编辑状态类名: editing 任务完成状态类名: completed -->
 			<section class="main">
 				<input class="toggle-all" type="checkbox" />
 				<ul class="todo-list">
-					<!-- 任务编辑状态类名: editing 任务完成状态类名: completed -->
+					
 					<li class="completed">
 						<div class="view">
-							<input class="toggle" type="checkbox" checked />
+							<input class="toggle" type="checkbox" />
 							<label>Taste JavaScript</label>
 							<button class="destroy"></button>
 						</div>
@@ -36,6 +37,7 @@
 				</ul>
 			</section>
 			<!-- 列表中没有任务时 隐藏footer -->
+			<!-- 如果没有已完成的任务就隐藏 -->
 			<footer class="footer">
 				<span class="todo-count"><strong>0</strong> item left</span>
 				<ul class="filters">
@@ -49,7 +51,7 @@
 						<button>Completed</button>
 					</li>
 				</ul>
-				<!-- 如果没有已完成的任务就隐藏 -->
+				
 				<button class="clear-completed">Clear completed</button>
 			</footer>
 		</section>

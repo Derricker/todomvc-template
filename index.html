@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Template • TodoMVC</title>
-		<link rel="stylesheet" href="assets/css/base.css">
 		<link rel="stylesheet" href="assets/css/index.css">
 	</head>
 	<body>
@@ -13,13 +12,12 @@
 				<h1>todos</h1>
 				<input class="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
-			<!-- This section should be hidden by default and shown when there are todos -->
+			<!-- 列表中没有任务时 隐藏main -->
 			<section class="main">
 				<input class="toggle-all" type="checkbox">
 				<label for="toggle-all">Mark all as complete</label>
 				<ul class="todo-list">
-					<!-- These are here just to show the structure of the list items -->
-					<!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
+					<!-- 任务编辑状态类名: editing 任务完成状态类名: completed -->
 					<li class="completed">
 						<div class="view">
 							<input class="toggle" type="checkbox" checked>
@@ -38,33 +36,23 @@
 					</li>
 				</ul>
 			</section>
-			<!-- This footer should hidden by default and shown when there are todos -->
+			<!-- 列表中没有任务时 隐藏footer -->
 			<footer class="footer">
-				<!-- This should be `0 items left` by default -->
 				<span class="todo-count"><strong>0</strong> item left</span>
-				<!-- Remove this if you don't implement routing -->
 				<ul class="filters">
 					<li>
-						<a class="selected" href="#/">All</a>
+						<button class="selected">All</button>
 					</li>
 					<li>
-						<a href="#/active">Active</a>
+						<button>Active</button>
 					</li>
 					<li>
-						<a href="#/completed">Completed</a>
+						<button>Completed</button>
 					</li>
 				</ul>
-				<!-- Hidden if no completed items are left ↓ -->
+				<!-- 如果没有已完成的任务就隐藏 -->
 				<button class="clear-completed">Clear completed</button>
 			</footer>
 		</section>
-		<footer class="info">
-			<p>Double-click to edit a todo</p>
-			<!-- Remove the below line ↓ -->
-			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
-			<!-- Change this out with your name and url ↓ -->
-			<p>Created by <a href="http://todomvc.com">you</a></p>
-			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-		</footer>
 	</body>
 </html>
